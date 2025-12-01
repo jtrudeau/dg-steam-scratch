@@ -1,0 +1,17 @@
+[
+  {
+    "teamId": "team-01",
+    "name": "Photon Builders",
+    "code": "PB7",
+    "scratchStudio": "https://scratch.mit.edu/studios/123456789",
+    "notes": "Story-driven builds; excels at character dialogue."
+  },
+  {
+    "teamId": "team-02",
+    "name": "Circuit Scribes",
+    "code": "CS9",
+    "scratchStudio": "https://scratch.mit.edu/studios/987654321",
+    "notes": "Lean toward data visualizations and dashboards."
+  }
+]
+
