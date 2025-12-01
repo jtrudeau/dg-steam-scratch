@@ -10,7 +10,7 @@
     "export": "next export",
     "build:pages": "next build && next export",
     "typecheck": "tsc --noEmit",
-    "deploy": "touch out/.nojekyll && gh-pages -d out -t true"
+    "deploy": "touch out/.nojekyll && gh-pages -d out -t"
   },
   "dependencies": {
     "gray-matter": "4.0.3",

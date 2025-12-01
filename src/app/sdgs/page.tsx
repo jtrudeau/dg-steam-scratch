@@ -124,21 +124,21 @@ const sdgs = [
 
 export default function SDGsPage() {
   return (
-    <div className="relative isolate bg-white">
+    <div className="relative isolate">
       <section className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6 px-4 py-16 text-center sm:px-6 lg:px-8">
         <span className="tag">Project Discovery</span>
         <h1 className="font-display text-4xl font-black leading-tight text-[var(--ink)] sm:text-5xl">
           UN Sustainable Development Goals
         </h1>
-        <p className="max-w-3xl text-lg text-[var(--ink)]">
+        <p className="max-w-3xl text-lg font-semibold text-[var(--ink)]">
           The 17 Sustainable Development Goals (SDGs) are the world&apos;s shared plan to end extreme poverty, reduce inequality, and protect the planet by 2030.
         </p>
-        <div className="mt-4 rounded-xl bg-blue-50 p-6 text-left text-sm text-blue-900 border border-blue-100 max-w-2xl">
-          <h3 className="font-bold mb-2 text-lg">🧠 Think Like an Engineer</h3>
-          <p className="mb-2">
+        <div className="mt-4 max-w-2xl rounded-none border-2 border-[var(--ink)] bg-[var(--butter-light)] p-6 text-left text-sm text-[var(--ink)] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+          <h3 className="font-black mb-2 text-lg uppercase tracking-wide">🧠 Think Like an Engineer</h3>
+          <p className="mb-2 font-medium">
             As you explore these goals, consider: <strong>Is there a sustainable business idea or an engineering solution hidden here?</strong>
           </p>
-          <p>
+          <p className="font-medium">
             Could a robot help clean the oceans (SDG 14)? Could a new app help reduce food waste (SDG 12)? 
             While your Scratch project can be anything—a game, a story, or art—try to connect it to a real-world problem worth solving.
           </p>
@@ -153,21 +153,21 @@ export default function SDGsPage() {
               href={sdg.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition hover:shadow-md"
+              className="group panel flex flex-col overflow-hidden p-0 hover:translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-200"
             >
               <div
-                className="flex h-32 items-center justify-center px-6 text-center"
+                className="flex h-32 items-center justify-center border-b-2 border-[var(--ink)] px-6 text-center"
                 style={{ backgroundColor: sdg.color }}
               >
-                <h3 className="font-display text-2xl font-black text-white">
+                <h3 className="font-display text-2xl font-black text-white drop-shadow-md">
                   {sdg.id}. {sdg.title}
                 </h3>
               </div>
-              <div className="flex flex-1 flex-col justify-between p-6">
-                <p className="text-sm font-medium text-gray-600">
+              <div className="flex flex-1 flex-col justify-between p-6 bg-white">
+                <p className="text-sm font-bold text-[var(--ink)]">
                   {sdg.description}
                 </p>
-                <div className="mt-4 flex items-center text-xs font-bold uppercase tracking-wider text-gray-400 group-hover:text-[var(--scratch-blue)]">
+                <div className="mt-4 flex items-center text-xs font-black uppercase tracking-widest text-[var(--scratch-blue)] group-hover:underline">
                   View Targets on UN.org →
                 </div>
               </div>
