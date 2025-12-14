@@ -6,11 +6,9 @@ const nextConfig = {
   basePath: repoBase,
   assetPrefix: repoBase,
   trailingSlash: true,
+  typedRoutes: true,
   images: {
     unoptimized: true,
-  },
-  experimental: {
-    typedRoutes: true,
   },
 };
 
