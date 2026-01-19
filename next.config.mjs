@@ -1,10 +1,10 @@
-const repoBase = process.env.BASE_PATH ?? "/dg-steam-scratch";
+const repoBase = (process.env.BASE_PATH ?? "/dg-steam-scratch").replace(/\/$/, "");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: repoBase,
-  assetPrefix: repoBase,
+  basePath: repoBase || undefined,
+  assetPrefix: repoBase || undefined,
   trailingSlash: true,
   typedRoutes: true,
   images: {

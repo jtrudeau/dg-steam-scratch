@@ -1,5 +1,6 @@
 export const siteNav = [
   { href: "/sdgs", label: "SDGs" },
+  { href: "/astro-pi", label: "Astro Pi" },
 ];
 
 export const heroCopy = {

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getSessionById, getSessions } from "@/lib/content";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { MdxRenderer } from "@/components/mdx/MdxRenderer";
 
 export async function generateStaticParams() {
   return getSessions().map((session) => ({ sessionId: session.id }));
@@ -113,36 +114,50 @@ export default async function SessionPage({ params }: SessionPageProps) {
           </ul>
         </div>
       </div>
-      <div className="mt-8 grid gap-6 lg:grid-cols-2">
-        <div className="panel p-5">
-          <h3 className="text-xs font-black uppercase tracking-[0.25em]">
-            Flow
-          </h3>
-          <ol className="mt-4 space-y-3">
-            {session.flow.map((block) => (
-              <li key={block.title}>
-                <p className="text-sm font-black">
-                  {block.title}
-                  {block.duration ? ` (${block.duration})` : null}
-                </p>
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {block.description}
-                </ReactMarkdown>
-              </li>
-            ))}
-          </ol>
+      {session.flow?.length || session.teacherMoves?.length ? (
+        <div className="mt-8 grid gap-6 lg:grid-cols-2">
+          {session.flow?.length ? (
+            <div className="panel p-5">
+              <h3 className="text-xs font-black uppercase tracking-[0.25em]">
+                Flow
+              </h3>
+              <ol className="mt-4 space-y-3">
+                {session.flow.map((block) => (
+                  <li key={block.title}>
+                    <p className="text-sm font-black">
+                      {block.title}
+                      {block.duration ? ` (${block.duration})` : null}
+                    </p>
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {block.description}
+                    </ReactMarkdown>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          ) : null}
+          {session.teacherMoves?.length ? (
+            <div className="panel p-5">
+              <h3 className="text-xs font-black uppercase tracking-[0.25em]">
+                Teacher Moves
+              </h3>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm">
+                {session.teacherMoves.map((move) => (
+                  <li key={move}>{move}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
         </div>
-        <div className="panel p-5">
-          <h3 className="text-xs font-black uppercase tracking-[0.25em]">
-            Teacher Moves
-          </h3>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm">
-            {session.teacherMoves.map((move) => (
-              <li key={move}>{move}</li>
-            ))}
-          </ul>
+      ) : null}
+      {session.body ? (
+        <div className="panel mt-8 p-6">
+          <p className="text-xs font-black uppercase tracking-[0.25em]">
+            Session Guide
+          </p>
+          <MdxRenderer source={session.body} />
         </div>
-      </div>
+      ) : null}
     </section>
   );
 }

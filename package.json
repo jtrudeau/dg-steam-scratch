@@ -7,18 +7,23 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build",
-    "build:pages": "next build",
     "typecheck": "tsc --noEmit",
-    "deploy": "touch out/.nojekyll && gh-pages -d out -t"
+    "build:static": "BASE_PATH=/dg-steam-scratch next build",
+    "build:local": "BASE_PATH='' next build",
+    "build:pages": "npm run build:static",
+    "deploy": "npm run build:pages && touch out/.nojekyll && gh-pages -d out -t"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
     "gray-matter": "4.0.3",
     "next": "^15.5.9",
+    "next-mdx-remote": "^5.0.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-markdown": "10.1.0",
-    "remark-gfm": "4.0.1"
+    "remark-gfm": "4.0.1",
+    "scratchblocks": "^3.6.1"
   },
   "devDependencies": {
     "@types/node": "20.12.12",

@@ -103,3 +103,16 @@ button,
   text-align: left;
 }
 
+.scratchblocks {
+  background: #fff;
+  border: 2px solid var(--ink);
+  padding: 0.75rem;
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.scratchblocks svg {
+  max-width: 100%;
+  height: auto;
+}

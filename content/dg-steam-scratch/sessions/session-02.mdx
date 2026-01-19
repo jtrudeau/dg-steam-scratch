@@ -1,34 +1,54 @@
----
-id: session-02
-title: SDG Mini-Challenge Sprint
-phase: onboarding
-meeting_number: 2
-student_objective: "Code a tiny interactive scene that shares an SDG fact using looks and sounds."
-teacher_goal: "Reinforce block categories, highlight iteration, and prep teams for ideation."
-scratch_focus:
-  - looks
-  - sound
-  - control
-artifacts:
-  - mini challenge remix link
-  - reflection sticky
-delivery:
-  worksheets:
-    - sprint-log
-  resources:
-    - scratch-interface-tour
----
+## Exploring Events and Motion
 
-## Flow
+Today we'll learn how events make sprites respond to user actions.
 
-1. **Warmup circle (5 min)** – Students share one SDG fact they found between sessions.
-2. **Mini brief (10 min)** – Introduce the challenge template: “Show + tell an SDG data point in 30 seconds.”
-3. **Build sprint (25 min)** – Pairs remix a starter project, adding looks/sound blocks and control (repeat, wait).
-4. **Gallery walk (10 min)** – Quiet showcase; peers leave “spark” sticky notes with appreciations and questions.
+### Event-Driven Programming
 
-## Teacher Moves
+Events are triggers that start scripts. Here's a basic event:
 
-- Encourage purposeful use of sound—celebrate teams who pair audio with on-screen data.
-- Model how to duplicate sprites + change costumes quickly.
-- Debrief by connecting mini challenges to the upcoming project ideation workshop.
+```scratch
+when this sprite clicked
+say [You clicked me!] for (2) secs
+```
 
+### Keyboard Controls
+
+Make your sprite move with arrow keys:
+
+```scratch
+when [space v] key pressed
+change y by (10)
+
+when [left arrow v] key pressed
+change x by (-10)
+
+when [right arrow v] key pressed
+change x by (10)
+```
+
+### Challenge: Interactive Story
+
+Create a sprite that:
+1. Says something when clicked
+2. Changes costume when space pressed  
+3. Moves with arrow keys
+
+```scratch
+when green flag clicked
+go to x: (0) y: (0)
+say [Click me to start!]
+
+when this sprite clicked
+say [Now press space!] for (2) secs
+
+when [space v] key pressed
+next costume
+say [Press arrow keys to move!]
+```
+
+### Debug Tips
+
+If your sprite doesn't respond:
+- Check that the event block is at the **top** of the stack
+- Make sure you're clicking/pressing the right thing
+- Use `say` blocks to test if events are firing

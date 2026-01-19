@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Resource } from "@/types/content";
 
 type ResourceCardProps = {
@@ -37,7 +38,11 @@ export const ResourceCard = ({ resource }: ResourceCardProps) => (
         </li>
       ))}
     </ul>
+    <Link
+      href={`/resources/${resource.id}`}
+      className="mt-4 inline-flex text-sm font-black text-[var(--scratch-blue)]"
+    >
+      Open tutorial →
+    </Link>
   </article>
 );
-
-
