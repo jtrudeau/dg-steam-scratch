@@ -7,7 +7,7 @@ export const SiteHeader = () => {
     <header className="sticky top-0 z-50 border-b-4 border-[var(--ink)] bg-[var(--paper)]">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="font-display text-xl font-black uppercase text-[var(--ink)]">
-          DG Scratch Hub
+          DG-STEAM Hub
         </Link>
         <MainNav items={siteNav} /> {/* Pass siteNav as items prop */}
         <Link

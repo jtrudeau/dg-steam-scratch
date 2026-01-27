@@ -30,9 +30,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />
           <main className="flex-1">{children}</main>
-          <footer className="border-t-2 border-[var(--ink)] bg-transparent py-8 text-center text-sm font-semibold">
-            © {new Date().getFullYear()} DG-STEAM Scratch Hub · Built for the
-            DG STEAM Collective.
+          <footer className="border-t-4 border-[var(--ink)] bg-transparent py-6">
+            <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+              <div>
+                <p className="font-display text-sm font-black uppercase tracking-wide text-[var(--ink)]">
+                  STEAM Sustainable Engineering Hub
+                </p>
+                <p className="text-xs font-semibold text-[var(--ink)] opacity-70">
+                  Levelling up with Scratch
+                </p>
+              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={(process.env.BASE_PATH ?? "/dg-steam-scratch") + "/images/IRV-logo-small.png"}
+                alt="Made with IRV"
+                className="h-7 w-auto"
+              />
+            </div>
           </footer>
         </div>
       </body>
