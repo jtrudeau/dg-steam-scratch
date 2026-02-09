@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fresources\u002F[resourceId]","\u002Fscratch\u002F[moduleId]","\u002Fsessions\u002F[sessionId]","\u002Fteams\u002F[teamId]","\u002Fworksheets\u002F[worksheetId]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
