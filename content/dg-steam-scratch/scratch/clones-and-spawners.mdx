@@ -1,0 +1,44 @@
+---
+id: "clones-and-spawners"
+title: "Clones + Spawners"
+type: "module"
+length: "intermediate"
+section: "Intermediate Toolkit"
+order: 11
+scratchTags:
+  - "clones"
+  - "spawning"
+relatedSessions: []
+summary: "Generate repeated objects like coins, enemies, or particles without copy-paste."
+steps:
+  - title: "Spawn"
+    description: "Create clones with spacing or timing rules."
+  - title: "Control"
+    description: "Give each clone its own movement or behavior."
+  - title: "Cleanup"
+    description: "Delete clones when they are no longer needed."
+---
+
+## Goal
+
+Use clones to build dynamic scenes with less manual work.
+
+## Try it
+
+Create a clone every second and move it across the screen.
+
+```scratch
+when green flag clicked
+forever
+  create clone of [myself v]
+  wait (1) seconds
+end
+when I start as a clone
+  go to x: (-220) y: (0)
+  glide (2) secs to x: (220) y: (0)
+  delete this clone
+```
+
+## Checkpoint
+
+Clones appear and disappear without slowing the project.

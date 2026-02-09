@@ -1,0 +1,39 @@
+---
+id: "lists-and-collections"
+title: "Lists + Collections"
+type: "module"
+length: "intermediate"
+section: "Intermediate Toolkit"
+order: 10
+scratchTags:
+  - "lists"
+  - "data"
+relatedSessions: []
+summary: "Store sets of data like quiz questions, inventory, or high scores."
+steps:
+  - title: "Collect"
+    description: "Use lists to store multiple items."
+  - title: "Pick"
+    description: "Choose a random or ordered item from a list."
+  - title: "Update"
+    description: "Add or delete items as the project changes."
+---
+
+## Goal
+
+Use lists for collections that grow over time.
+
+## Try it
+
+Create a list of questions and display a random one.
+
+```scratch
+when green flag clicked
+add [Question A] to [questions v]
+add [Question B] to [questions v]
+say (item (pick random (1) to (length of [questions v])) of [questions v])
+```
+
+## Checkpoint
+
+You can store at least 3 items and pick one reliably.

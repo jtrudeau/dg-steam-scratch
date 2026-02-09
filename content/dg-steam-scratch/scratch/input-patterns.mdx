@@ -1,0 +1,43 @@
+---
+id: "input-patterns"
+title: "Input Patterns"
+type: "module"
+length: "intermediate"
+section: "Intermediate Toolkit"
+order: 9
+scratchTags:
+  - "input"
+  - "controls"
+relatedSessions: []
+summary: "Build reliable keyboard and mouse controls that feel responsive."
+steps:
+  - title: "Map keys"
+    description: "Choose clear controls and document them on screen."
+  - title: "Hold vs tap"
+    description: "Use forever loops for hold controls, events for taps."
+  - title: "Debounce"
+    description: "Add short waits to prevent accidental repeats."
+---
+
+## Goal
+
+Create control schemes that match your game or story.
+
+## Try it
+
+Build left/right movement with a loop that checks keys.
+
+```scratch
+forever
+  if <key [left arrow v] pressed?> then
+    change x by (-5)
+  end
+  if <key [right arrow v] pressed?> then
+    change x by (5)
+  end
+end
+```
+
+## Checkpoint
+
+You can explain the difference between tap and hold controls.

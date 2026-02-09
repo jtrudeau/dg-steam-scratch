@@ -37,6 +37,36 @@ export type Resource = {
   steps: ResourceStep[];
 };
 
+export type ScratchModule = Resource & {
+  section: string;
+  order: number;
+  level?: string;
+};
+
+export type ScratchTutorial = {
+  id: string;
+  title: string;
+  projectId: number;
+  provider: "scratch";
+  authorSummary: string;
+  estMinutes?: number;
+  tags: string[];
+  difficulty?: "basic" | "intermediate";
+};
+
+export type ScratchTrainingPlaylist = {
+  id: string;
+  title: string;
+  description: string;
+  moduleIds: string[];
+  tutorialIds: string[];
+};
+
+export type ScratchTrainingCatalog = {
+  tutorials: ScratchTutorial[];
+  playlists: ScratchTrainingPlaylist[];
+};
+
 export type WorksheetBlock =
   | { type: "section"; title: string }
   | { type: "paragraph"; text: string }
@@ -70,4 +100,3 @@ export type TeamInfo = {
   scratchStudio: string;
   notes?: string;
 };
-

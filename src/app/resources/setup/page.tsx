@@ -125,7 +125,8 @@ export default function ScratchSetupPage() {
             <li>
               Open a new tab: <strong>scratch.mit.edu</strong> → Join.
               Choose a username without your real name (e.g., <code>dg-rocket-17</code>);
-              set the program password pattern; enter your EMSB email; set birthdate/country; skip newsletter.
+              set the program password pattern; enter your EMSB email (ending in <code>@edu.emsb.qc.ca</code>);
+              set birthdate/country; skip newsletter.
             </li>
             <li>
               Check your EMSB WebMail for the Scratch email → click

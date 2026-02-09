@@ -3,6 +3,10 @@ import path from "node:path";
 import matter from "gray-matter";
 import type {
   Resource,
+  ScratchTrainingCatalog,
+  ScratchTrainingPlaylist,
+  ScratchTutorial,
+  ScratchModule,
   Session,
   TeamInfo,
   TeacherNote,
@@ -13,6 +17,11 @@ const contentRoot = path.join(
   process.cwd(),
   "content",
   process.env.CONTENT_PROJECT ?? "dg-steam-scratch"
+);
+const scratchTrainingCatalogPath = path.join(
+  contentRoot,
+  "scratch",
+  "training-playlists.json",
 );
 
 type ParsedContent<T> = {
@@ -115,6 +124,148 @@ export const getResourceById = (id: string): ResourceWithBody | undefined =>
   readMarkdownContentWithBody<Resource>("resources").find(
     (resource) => resource.id === id,
   );
+
+export const getScratchModules = (): ScratchModule[] => {
+  return readMarkdownContent<ScratchModule>("scratch").sort(
+    (a, b) => (a.order ?? 0) - (b.order ?? 0),
+  );
+};
+
+export type ScratchModuleWithBody = ScratchModule & { body: string };
+
+export const getScratchModuleById = (
+  id: string,
+): ScratchModuleWithBody | undefined =>
+  readMarkdownContentWithBody<ScratchModule>("scratch").find(
+    (module) => module.id === id,
+  );
+
+const isDifficulty = (
+  difficulty: unknown,
+): difficulty is ScratchTutorial["difficulty"] =>
+  difficulty === "basic" || difficulty === "intermediate";
+
+const toScratchTutorial = (value: unknown): ScratchTutorial | undefined => {
+  if (!value || typeof value !== "object") return undefined;
+  const candidate = value as Record<string, unknown>;
+  if (
+    typeof candidate.id !== "string" ||
+    typeof candidate.title !== "string" ||
+    typeof candidate.projectId !== "number" ||
+    !Number.isFinite(candidate.projectId) ||
+    candidate.provider !== "scratch" ||
+    typeof candidate.authorSummary !== "string" ||
+    !Array.isArray(candidate.tags) ||
+    !candidate.tags.every((tag) => typeof tag === "string")
+  ) {
+    return undefined;
+  }
+
+  if (
+    candidate.estMinutes !== undefined &&
+    (typeof candidate.estMinutes !== "number" ||
+      !Number.isFinite(candidate.estMinutes))
+  ) {
+    return undefined;
+  }
+
+  if (
+    candidate.difficulty !== undefined &&
+    !isDifficulty(candidate.difficulty)
+  ) {
+    return undefined;
+  }
+
+  return {
+    id: candidate.id,
+    title: candidate.title,
+    projectId: candidate.projectId,
+    provider: "scratch",
+    authorSummary: candidate.authorSummary,
+    estMinutes: candidate.estMinutes as number | undefined,
+    tags: candidate.tags as string[],
+    difficulty: candidate.difficulty as ScratchTutorial["difficulty"] | undefined,
+  };
+};
+
+const toScratchTrainingPlaylist = (
+  value: unknown,
+): ScratchTrainingPlaylist | undefined => {
+  if (!value || typeof value !== "object") return undefined;
+  const candidate = value as Record<string, unknown>;
+  if (
+    typeof candidate.id !== "string" ||
+    typeof candidate.title !== "string" ||
+    typeof candidate.description !== "string" ||
+    !Array.isArray(candidate.moduleIds) ||
+    !candidate.moduleIds.every((id) => typeof id === "string") ||
+    !Array.isArray(candidate.tutorialIds) ||
+    !candidate.tutorialIds.every((id) => typeof id === "string")
+  ) {
+    return undefined;
+  }
+
+  return {
+    id: candidate.id,
+    title: candidate.title,
+    description: candidate.description,
+    moduleIds: candidate.moduleIds as string[],
+    tutorialIds: candidate.tutorialIds as string[],
+  };
+};
+
+export const getScratchTrainingCatalog = (): ScratchTrainingCatalog => {
+  if (!fs.existsSync(scratchTrainingCatalogPath)) {
+    return { tutorials: [], playlists: [] };
+  }
+
+  try {
+    const raw = fs.readFileSync(scratchTrainingCatalogPath, "utf-8");
+    const parsed = JSON.parse(raw) as {
+      tutorials?: unknown[];
+      playlists?: unknown[];
+    };
+    const tutorials = Array.isArray(parsed.tutorials)
+      ? parsed.tutorials
+          .map(toScratchTutorial)
+          .filter((tutorial): tutorial is ScratchTutorial => Boolean(tutorial))
+      : [];
+    const playlists = Array.isArray(parsed.playlists)
+      ? parsed.playlists
+          .map(toScratchTrainingPlaylist)
+          .filter(
+            (playlist): playlist is ScratchTrainingPlaylist => Boolean(playlist),
+          )
+      : [];
+    return { tutorials, playlists };
+  } catch {
+    return { tutorials: [], playlists: [] };
+  }
+};
+
+export const getScratchTutorialsForModule = (
+  moduleId: string,
+): ScratchTutorial[] => {
+  const catalog = getScratchTrainingCatalog();
+  const tutorialById = new Map(
+    catalog.tutorials.map((tutorial) => [tutorial.id, tutorial]),
+  );
+  const seen = new Set<string>();
+  const tutorials: ScratchTutorial[] = [];
+
+  catalog.playlists.forEach((playlist) => {
+    if (!playlist.moduleIds.includes(moduleId)) return;
+    playlist.tutorialIds.forEach((tutorialId) => {
+      if (seen.has(tutorialId)) return;
+      const tutorial = tutorialById.get(tutorialId);
+      if (!tutorial) return;
+      seen.add(tutorialId);
+      tutorials.push(tutorial);
+    });
+  });
+
+  return tutorials;
+};
 
 export const getTeacherNotes = (): TeacherNote[] => {
   return readMarkdownContent<TeacherNote>("teacher-notes");

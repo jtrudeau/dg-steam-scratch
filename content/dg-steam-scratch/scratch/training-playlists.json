@@ -1,0 +1,44 @@
+{
+  "tutorials": [
+    {
+      "id": "scratch-basics-31407152",
+      "title": "Scratch Basics Tutorial",
+      "projectId": 31407152,
+      "provider": "scratch",
+      "authorSummary": "Intro tutorial focused on core editor navigation, events, and first interactions.",
+      "estMinutes": 15,
+      "tags": ["basics", "events", "onboarding"],
+      "difficulty": "basic"
+    }
+  ],
+  "playlists": [
+    {
+      "id": "scratch-basics-core",
+      "title": "Scratch Basics Core",
+      "description": "Start here sequence for first-time Scratch learners.",
+      "moduleIds": [
+        "scratch-start-here",
+        "scratch-setup-and-safety",
+        "events-and-timing",
+        "motion-and-coordinates",
+        "looks-and-scenes"
+      ],
+      "tutorialIds": ["scratch-basics-31407152"]
+    },
+    {
+      "id": "scratch-intermediate-toolkit",
+      "title": "Scratch Intermediate Toolkit",
+      "description": "Reusable patterns for stronger project architecture.",
+      "moduleIds": [
+        "variables-and-state",
+        "broadcasts-and-scenes",
+        "debugging-workflow",
+        "input-patterns",
+        "lists-and-collections",
+        "clones-and-spawners",
+        "my-blocks"
+      ],
+      "tutorialIds": []
+    }
+  ]
+}

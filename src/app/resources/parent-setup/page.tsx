@@ -27,7 +27,7 @@ export default function ParentSetupPage() {
           What You Need
         </h2>
         <ul className="list-disc space-y-2 pl-5 text-sm font-semibold text-[var(--ink)]">
-          <li>Your child&apos;s EMSB email address (e.g. <code>firstname.lastname@emsb.qc.ca</code>)</li>
+          <li>Your child&apos;s EMSB email address (e.g. <code>username@edu.emsb.qc.ca</code>)</li>
           <li>Your child&apos;s EMSB password (used to log into ePortal)</li>
           <li>A computer with internet access</li>
           <li>About 10 minutes</li>
@@ -75,8 +75,8 @@ export default function ParentSetupPage() {
           <Step
             n={3}
             title="Select country and birthday"
-            image="/images/parent-setup/04-birthday.png"
-            alt="Scratch birthday and country selection"
+            image={null}
+            alt=""
           >
             Select <strong>Canada</strong> and your child&apos;s birth month and
             year. Click <strong>Next</strong>. You can skip the newsletter.
@@ -85,11 +85,11 @@ export default function ParentSetupPage() {
           <Step
             n={4}
             title="Enter your child's EMSB email"
-            image="/images/parent-setup/05-email.png"
-            alt="Scratch email dialog with EMSB email entered"
+            image={null}
+            alt=""
           >
             Type your child&apos;s full EMSB email address (e.g.{" "}
-            <code>firstname.lastname@emsb.qc.ca</code>). This is where Scratch
+            <code>username@edu.emsb.qc.ca</code>). This is where Scratch
             will send the confirmation email. Click <strong>Create Your Account</strong>.
           </Step>
 
@@ -134,6 +134,9 @@ export default function ParentSetupPage() {
               emsb.qc.ca
             </a>{" "}
             and click <strong>ePortal</strong> in the top-right area of the page.
+            Use your child&apos;s EMSB email and password here; this is the same
+            account used for other school logins, including Chromebooks and
+            Google Classroom.
           </Step>
 
           <Step
@@ -163,7 +166,8 @@ export default function ParentSetupPage() {
             alt="Scratch confirmation email in the inbox"
           >
             Look for an email from <strong>Scratch</strong> with a subject like
-            &quot;Confirm your email&quot; or &quot;Please verify your email address.&quot;
+            &quot;Confirm your email&quot;, &quot;Please verify your email address&quot;, or
+            &quot;Your Child is Ready to Create with Scratch&quot;.
             <br />
             <br />
             <strong>Check the Junk / Spam folder</strong> if you don&apos;t see
@@ -177,7 +181,9 @@ export default function ParentSetupPage() {
             alt="Scratch email with the confirm button highlighted"
           >
             Open the email and click the <strong>Confirm my email address</strong>{" "}
-            button or link. This completes the account setup.
+            or <strong>Yes, I give permission</strong> button/link. Clicking the
+            link will confirm the email and take you back to the Scratch website.
+            This completes account setup.
           </Step>
         </ol>
 

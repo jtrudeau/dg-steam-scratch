@@ -6,7 +6,9 @@ export const metadata = {
 };
 
 export default function SessionsPage() {
-  const sessions = getSessions().filter(s => s.id === "project-discovery");
+  const sessions = getSessions().filter((s) =>
+    ["project-discovery", "sustainable-business-to-scratch"].includes(s.id)
+  );
 
   return (
     <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
@@ -34,4 +36,3 @@ export default function SessionsPage() {
     </section>
   );
 }
-

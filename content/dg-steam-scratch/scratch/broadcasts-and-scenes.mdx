@@ -1,0 +1,39 @@
+---
+id: "broadcasts-and-scenes"
+title: "Broadcasts + Scene Control"
+type: "module"
+length: "core"
+section: "Scratch Basics"
+order: 7
+scratchTags:
+  - "broadcast"
+  - "coordination"
+relatedSessions: []
+summary: "Coordinate multiple sprites with broadcast messages and listeners."
+steps:
+  - title: "Signal"
+    description: "Broadcast a message when something important happens."
+  - title: "Listen"
+    description: "Use when I receive to respond in other sprites."
+  - title: "Chain"
+    description: "Trigger the next scene with a second broadcast."
+---
+
+## Goal
+
+Keep sprites and scenes in sync using messages.
+
+## Try it
+
+Broadcast a message to change a backdrop and start a new sprite action.
+
+```scratch
+when green flag clicked
+broadcast [scene-2 v]
+when I receive [scene-2 v]
+switch backdrop to [ocean v]
+```
+
+## Checkpoint
+
+You can coordinate two sprites without timing hacks.

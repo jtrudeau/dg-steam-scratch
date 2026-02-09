@@ -5,7 +5,7 @@ import { SessionSummaryCard } from "@/components/sessions/SessionSummaryCard";
 export default function HomePage() {
   const sessions = getSessions();
   const displayedSessions = sessions.filter((s) =>
-    ["project-discovery"].includes(s.id)
+    ["project-discovery", "sustainable-business-to-scratch"].includes(s.id)
   );
 
   return (
@@ -36,4 +36,3 @@ export default function HomePage() {
     </div>
   );
 }
-
