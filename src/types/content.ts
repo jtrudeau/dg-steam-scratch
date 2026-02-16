@@ -96,7 +96,10 @@ export type TeacherNote = {
 export type TeamInfo = {
   teamId: string;
   name: string;
-  code?: string;
-  scratchStudio: string;
+  members: string[];
+  businessIdea: string;
+  sdg: string;
+  scratchProject: string | null;
+  status: "brainstorming" | "building" | "showcasing";
   notes?: string;
 };

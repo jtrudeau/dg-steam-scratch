@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function SessionsPage() {
   const sessions = getSessions().filter((s) =>
-    ["project-discovery", "sustainable-business-to-scratch"].includes(s.id)
+    ["project-discovery", "sustainable-business-to-scratch", "session-05"].includes(s.id)
   );
 
   return (

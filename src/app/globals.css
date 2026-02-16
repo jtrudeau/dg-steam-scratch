@@ -103,6 +103,89 @@ button,
   text-align: left;
 }
 
+/* Session guide — step cards for student-facing instructions */
+.session-guide .prose h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.session-guide .prose h3 {
+  background: #fff;
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  padding: 0.75rem 1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.session-guide .prose ol {
+  list-style: none;
+  counter-reset: step-counter;
+  padding-left: 0;
+}
+
+.session-guide .prose ol > li {
+  counter-increment: step-counter;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.session-guide .prose ol > li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--scratch-orange);
+  border: 2px solid var(--ink);
+  font-size: 0.75rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.session-guide .prose ul {
+  padding-left: 1.25rem;
+}
+
+.session-guide .prose ul li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.session-guide .prose ul li::marker {
+  color: var(--scratch-orange);
+  font-weight: 900;
+}
+
+.session-guide .prose code {
+  background: #fff;
+  border: 1px solid var(--ink);
+  padding: 0.15rem 0.4rem;
+  font-size: 0.85em;
+}
+
+/* Facilitator notes — collapsed by default */
+.facilitator-notes {
+  border-top: 2px dashed var(--ink);
+  padding-top: 1rem;
+}
+
+.facilitator-notes summary::marker {
+  color: var(--ink);
+}
+
+.facilitator-notes[open] summary {
+  margin-bottom: 0.5rem;
+}
+
 .scratchblocks {
   background: #fff;
   border: 2px solid var(--ink);

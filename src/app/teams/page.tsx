@@ -5,6 +5,12 @@ export const metadata = {
   title: "Teams · DG-STEAM Scratch Hub",
 };
 
+const statusLabel: Record<string, string> = {
+  brainstorming: "Brainstorming",
+  building: "Building",
+  showcasing: "Showcasing",
+};
+
 export default function TeamsPage() {
   const teams = getTeams();
 
@@ -16,22 +22,28 @@ export default function TeamsPage() {
           Team Dashboards
         </h1>
         <p className="max-w-3xl text-lg font-semibold text-[var(--ink)]">
-          Jump to your squad’s workspace: sprint goals, Scratch studio, and
-          reflection prompts without hunting through the KB.
+          Find your team, check your project, and jump into your Scratch studio.
         </p>
       </div>
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {teams.map((team) => (
           <article key={team.teamId} className="panel p-6">
-            <p className="text-xs font-black uppercase tracking-[0.25em]">
-              {team.teamId.toUpperCase()}
-            </p>
-            <h2 className="mt-2 text-2xl font-black text-[var(--ink)]">
-              {team.name}
-            </h2>
-            {team.notes && (
-              <p className="mt-3 text-sm font-semibold text-[var(--ink)]">
-                {team.notes}
+            <div className="flex items-baseline justify-between gap-2">
+              <h2 className="text-xl font-black text-[var(--ink)]">
+                {team.name || `Team ${team.teamId.replace("team-", "")}`}
+              </h2>
+              <span className="shrink-0 border-2 border-[var(--ink)] px-2 py-0.5 text-[10px] font-black uppercase tracking-[0.2em]">
+                {statusLabel[team.status] ?? team.status}
+              </span>
+            </div>
+            {team.businessIdea && (
+              <p className="mt-2 text-sm font-semibold text-[var(--ink)]/70">
+                {team.businessIdea}
+              </p>
+            )}
+            {team.members.length > 0 && (
+              <p className="mt-2 text-xs font-semibold text-[var(--ink)]/50">
+                {team.members.join(" · ")}
               </p>
             )}
             <Link
@@ -46,4 +58,3 @@ export default function TeamsPage() {
     </section>
   );
 }
-

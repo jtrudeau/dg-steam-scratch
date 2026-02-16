@@ -1,17 +1,92 @@
 [
   {
     "teamId": "team-01",
-    "name": "Photon Builders",
-    "code": "PB7",
-    "scratchStudio": "https://scratch.mit.edu/studios/123456789",
-    "notes": "Story-driven builds; excels at character dialogue."
+    "name": "Restart",
+    "members": ["Leon", "Michael", "Nathan", "Noah"],
+    "businessIdea": "",
+    "sdg": "",
+    "scratchProject": null,
+    "status": "brainstorming",
+    "notes": ""
   },
   {
     "teamId": "team-02",
-    "name": "Circuit Scribes",
-    "code": "CS9",
-    "scratchStudio": "https://scratch.mit.edu/studios/987654321",
-    "notes": "Lean toward data visualizations and dashboards."
+    "name": "AuraB",
+    "members": ["Eva", "Stamatina", "Thalia", "Siena", "Sofia"],
+    "businessIdea": "",
+    "sdg": "",
+    "scratchProject": null,
+    "status": "brainstorming",
+    "notes": ""
+  },
+  {
+    "teamId": "team-03",
+    "name": "Roots & Blooms",
+    "members": ["Muhammad", "Charlene", "Phoenix", "Mila"],
+    "businessIdea": "",
+    "sdg": "",
+    "scratchProject": null,
+    "status": "brainstorming",
+    "notes": ""
+  },
+  {
+    "teamId": "team-04",
+    "name": "Animal Aid",
+    "members": ["Tehya", "Vivienne", "Vivianne", "Kateri", "Anna"],
+    "businessIdea": "",
+    "sdg": "",
+    "scratchProject": null,
+    "status": "brainstorming",
+    "notes": ""
+  },
+  {
+    "teamId": "team-05",
+    "name": "Stepping Stone",
+    "members": ["Louise", "Leia", "Joanna", "Summer", "Juliette"],
+    "businessIdea": "",
+    "sdg": "",
+    "scratchProject": null,
+    "status": "brainstorming",
+    "notes": ""
+  },
+  {
+    "teamId": "team-06",
+    "name": "Second Sight",
+    "members": ["Dimitri", "Jordano", "Mario", "Mason"],
+    "businessIdea": "",
+    "sdg": "",
+    "scratchProject": null,
+    "status": "brainstorming",
+    "notes": ""
+  },
+  {
+    "teamId": "team-07",
+    "name": "Chic",
+    "members": ["Elianne", "Sadie", "Dahlia", "Eveline"],
+    "businessIdea": "",
+    "sdg": "",
+    "scratchProject": null,
+    "status": "brainstorming",
+    "notes": ""
+  },
+  {
+    "teamId": "team-08",
+    "name": "Redriven",
+    "members": ["Aoran", "Christos", "Marcus", "Michael", "Rodrigo"],
+    "businessIdea": "",
+    "sdg": "",
+    "scratchProject": null,
+    "status": "brainstorming",
+    "notes": ""
+  },
+  {
+    "teamId": "team-09",
+    "name": "EBC",
+    "members": ["Eydin", "Alexandre", "Edgar", "Austin", "George"],
+    "businessIdea": "",
+    "sdg": "",
+    "scratchProject": null,
+    "status": "brainstorming",
+    "notes": ""
   }
 ]
-

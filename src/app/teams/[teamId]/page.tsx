@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getSessions, getTeamById, getTeams } from "@/lib/content";
+import { ScratchEmbed } from "@/components/scratch/ScratchEmbed";
 
 export async function generateStaticParams() {
   return getTeams().map((team) => ({ teamId: team.teamId }));
@@ -9,11 +10,26 @@ type TeamPageProps = {
   params: Promise<{ teamId: string }>;
 };
 
+const statusLabel: Record<string, string> = {
+  brainstorming: "Brainstorming",
+  building: "Building",
+  showcasing: "Showcasing",
+};
+
+/** Extract numeric project ID from a scratch.mit.edu/projects/123 URL */
+function extractProjectId(url: string): number | null {
+  const match = url.match(/scratch\.mit\.edu\/projects\/(\d+)/);
+  return match ? Number(match[1]) : null;
+}
+
 export default async function TeamPage({ params }: TeamPageProps) {
   const { teamId } = await params;
   const team = getTeamById(teamId);
   const sessions = getSessions();
-  const nextSession = sessions[0];
+  const nextSession = sessions[sessions.length - 1];
+  const projectId = team?.scratchProject
+    ? extractProjectId(team.scratchProject)
+    : null;
 
   if (!team) {
     return (
@@ -38,34 +54,62 @@ export default async function TeamPage({ params }: TeamPageProps) {
         href="/teams"
         className="text-sm font-black uppercase tracking-[0.2em] text-[var(--scratch-blue)]"
       >
-        ← Back to teams
+        ← All teams
       </Link>
-      <p className="mt-4 text-xs font-black uppercase tracking-[0.25em]">
-        {team.teamId.toUpperCase()}
-      </p>
-      <h1 className="font-display text-4xl font-black text-[var(--ink)]">
-        {team.name}
-      </h1>
-      <div className="mt-6 grid gap-6 md:grid-cols-2">
-        <div className="panel p-6">
+
+      <div className="mt-4 flex items-baseline gap-3">
+        <h1 className="font-display text-4xl font-black text-[var(--ink)]">
+          {team.name || `Team ${teamId.replace("team-", "")}`}
+        </h1>
+        <span className="border-2 border-[var(--ink)] px-2 py-1 text-xs font-black uppercase tracking-[0.2em]">
+          {statusLabel[team.status] ?? team.status}
+        </span>
+      </div>
+
+      {team.members.length > 0 && (
+        <p className="mt-2 text-sm font-semibold text-[var(--ink)]/70">
+          {team.members.join(" · ")}
+        </p>
+      )}
+
+      {team.businessIdea && (
+        <div className="panel mt-6 p-6">
           <h2 className="text-xs font-black uppercase tracking-[0.25em]">
-            Scratch Studio
+            Our Sustainable Business Idea
           </h2>
           <p className="mt-2 text-sm font-semibold text-[var(--ink)]">
-            Share this link with your teammates to collaborate.
+            {team.businessIdea}
           </p>
-          <a
-            href={team.scratchStudio}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-4 inline-flex text-sm font-black text-[var(--scratch-blue)]"
-          >
-            Open studio →
-          </a>
+          {team.sdg && (
+            <p className="mt-2 text-xs font-black uppercase tracking-[0.2em] text-[var(--ink)]/60">
+              SDG: {team.sdg}
+            </p>
+          )}
         </div>
+      )}
+
+      <div className="mt-6 grid gap-6 md:grid-cols-2">
+        {team.scratchProject && (
+          <div className="panel p-6">
+            <h2 className="text-xs font-black uppercase tracking-[0.25em]">
+              Our Scratch Project
+            </h2>
+            <p className="mt-2 text-sm font-semibold text-[var(--ink)]">
+              Your team&apos;s shared project on Scratch.
+            </p>
+            <a
+              href={team.scratchProject}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 inline-flex text-sm font-black text-[var(--scratch-blue)]"
+            >
+              Open project →
+            </a>
+          </div>
+        )}
         <div className="panel p-6">
           <h2 className="text-xs font-black uppercase tracking-[0.25em]">
-            Next Session
+            Current Session
           </h2>
           <p className="mt-2 text-sm font-semibold">
             Meeting {nextSession.meetingNumber}: {nextSession.title}
@@ -77,10 +121,11 @@ export default async function TeamPage({ params }: TeamPageProps) {
             href={`/sessions/${nextSession.id}`}
             className="mt-4 inline-flex text-sm font-black text-[var(--scratch-blue)]"
           >
-            Review checklist →
+            See today&apos;s steps →
           </Link>
         </div>
       </div>
+
       {team.notes && (
         <div className="panel mt-6 p-6">
           <h2 className="text-xs font-black uppercase tracking-[0.25em]">
@@ -91,7 +136,21 @@ export default async function TeamPage({ params }: TeamPageProps) {
           </p>
         </div>
       )}
+
+      {projectId && (
+        <div className="mt-6">
+          <h2 className="text-xs font-black uppercase tracking-[0.25em]">
+            Our Project
+          </h2>
+          <div className="mt-3">
+            <ScratchEmbed
+              projectId={projectId}
+              title={`${team.name || "Team"} Project`}
+              authorSummary={team.businessIdea || ""}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
-
