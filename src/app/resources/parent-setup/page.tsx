@@ -228,14 +228,12 @@ export default function ParentSetupPage() {
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-3">
-        <Link href="/resources/setup" className="btn btn-primary">
-          Full Setup Walkthrough
-        </Link>
-        <Link href="/sessions/session-01" className="btn btn-secondary">
-          Back to Session 01
-        </Link>
-      </div>
+      <Link
+        href="/"
+        className="inline-flex text-sm font-black text-[var(--scratch-blue)]"
+      >
+        ← Back to Hub
+      </Link>
     </section>
   );
 }
