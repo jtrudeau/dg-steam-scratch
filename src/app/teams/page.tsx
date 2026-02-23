@@ -12,7 +12,7 @@ const statusLabel: Record<string, string> = {
 };
 
 export default function TeamsPage() {
-  const teams = getTeams();
+  const teams = getTeams().sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <section className="mx-auto w-full max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
@@ -25,7 +25,7 @@ export default function TeamsPage() {
           Find your team, check your project, and jump into your Scratch studio.
         </p>
       </div>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2">
         {teams.map((team) => (
           <article key={team.teamId} className="panel p-6">
             <div className="flex items-baseline justify-between gap-2">

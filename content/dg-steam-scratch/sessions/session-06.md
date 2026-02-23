@@ -16,16 +16,16 @@ delivery:
 flow:
   - title: "Set the challenge"
     duration: "5 min"
-    description: "No computers today. Paper and thinking only. By the end, one person from each team presents their plan to the class for feedback."
+    description: "No Scratch building today. Paper and thinking only. By the end, one person from each team presents their plan to the class, then key ideas go into Google Docs."
   - title: "Team planning — the blueprint sheet"
     duration: "25 min"
     description: "Each team fills out a structured planning sheet: project pitch, SDG connection, user interactions, scene sketches with flow arrows, Scratch concepts needed, and first build step."
   - title: "Team presentations"
     duration: "15 min"
     description: "One presenter per team. 1-2 minutes each. Format: what we're building, what the user does, show the sketch, what we build first. One question or suggestion from the class after each."
-  - title: "Revise"
+  - title: "Transfer to Google Doc"
     duration: "5 min"
-    description: "Based on feedback, circle one thing on your sheet to change, add, or clarify. Sheets collected for Mr. Joel's feedback."
+    description: "Teams transfer key blueprint elements (pitch, user interactions, first build step) into their Google Doc. Blueprint sheets collected for Mr. Joel's written feedback."
 teacherMoves:
   - "Walk through the blueprint sections briefly as a class (2 min) before teams start working independently."
   - "Circulate during planning. Push for specificity on user interactions — 'what does the user actually DO?' is the key question."
@@ -37,7 +37,7 @@ teacherMoves:
 
 ## Project Blueprint
 
-Today: no screens. Paper and thinking only.
+Today: no Scratch building. Paper and thinking only.
 
 You've picked your team, chosen a sustainable business idea, set up your Google Doc, and started exploring in Scratch. Now it's time to make a plan — a real one, on paper, before you start building.
 
@@ -45,7 +45,6 @@ You've picked your team, chosen a sustainable business idea, set up your Google 
 
 - Your team will have a **project blueprint** — a one-page plan for your Scratch project
 - **One person from your team** will present your plan to the class
-- You'll get **real feedback** from your classmates
 - Mr. Joel will collect your blueprints and give you written feedback before you start coding
 
 ---
@@ -66,7 +65,7 @@ What are you building? Say it so someone who knows nothing about your project un
 
 **2. The Problem** *(2–3 sentences)*
 
-- What SDG does this connect to?
+- What [SDG](https://sdgs.un.org/goals) does this connect to?
 - What problem are you addressing?
 - Who is this for?
 
@@ -97,7 +96,7 @@ Not "they learn about the environment." What do they **do**?
 
 **4. Scenes** *(draw 3–5 boxes)*
 
-Draw each screen or scene your project needs. Rough is fine — stick figures, labels, boxes. Don't worry about making it pretty.
+Draw each screen or scene you think your project needs. Rough is fine — stick figures, labels, boxes. Don't worry about making it pretty.
 
 For each scene, label:
 - What's on the screen
@@ -153,14 +152,17 @@ One person from your team stands up and presents. You have about **1–2 minutes
 
 **End with:** "The first thing we're building is **\_\_\_**."
 
-After your presentation, the class gives you **one question or one suggestion**. Listen. Write it down.
-
 ---
 
-### Step 3: Revise
+### Step 3: Transfer to Your Google Doc
 
-You heard feedback. Now look at your blueprint.
+You've got a plan on paper. Now get the key ideas into your team's Google Doc so everyone can access them later.
 
-**Circle one thing** to change, add, or make clearer.
+Open your team's Google Doc and add:
+- Your **pitch** (1–2 sentences)
+- Your **user interactions** list
+- Your **first build** step
 
-Hand your sheet to Mr. Joel. You'll get it back with feedback before you start building.
+You don't need to copy everything — just enough that your team knows the plan when you open Scratch next time.
+
+When you're done, hand your blueprint sheet to Mr. Joel. You'll get it back with written feedback before you start building.

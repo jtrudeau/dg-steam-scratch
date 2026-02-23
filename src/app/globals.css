@@ -19,13 +19,13 @@ body {
 }
 
 a {
-  color: var(--ink);
+  color: var(--scratch-blue);
   text-decoration: none;
   font-weight: 600;
 }
 
 a:hover {
-  color: var(--scratch-blue);
+  color: var(--scratch-orange);
 }
 
 .panel {

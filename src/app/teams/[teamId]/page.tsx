@@ -72,39 +72,17 @@ export default async function TeamPage({ params }: TeamPageProps) {
         </p>
       )}
 
-      {team.businessIdea && (
-        <div className="panel mt-6 p-6">
-          <h2 className="text-xs font-black uppercase tracking-[0.25em]">
-            Our Sustainable Business Idea
-          </h2>
-          <p className="mt-2 text-sm font-semibold text-[var(--ink)]">
-            {team.businessIdea}
-          </p>
-          {team.sdg && (
-            <p className="mt-2 text-xs font-black uppercase tracking-[0.2em] text-[var(--ink)]/60">
-              SDG: {team.sdg}
-            </p>
-          )}
-        </div>
-      )}
+      {/* --- Actionable: feedback + current session --- */}
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
-        {team.scratchProject && (
-          <div className="panel p-6">
+        {team.feedback && (
+          <div className="panel border-l-4 border-[var(--scratch-orange)] p-6">
             <h2 className="text-xs font-black uppercase tracking-[0.25em]">
-              Our Scratch Project
+              Feedback from Mr. Joel
             </h2>
             <p className="mt-2 text-sm font-semibold text-[var(--ink)]">
-              Your team&apos;s shared project on Scratch.
+              {team.feedback}
             </p>
-            <a
-              href={team.scratchProject}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-4 inline-flex text-sm font-black text-[var(--scratch-blue)]"
-            >
-              Open project →
-            </a>
           </div>
         )}
         <div className="panel p-6">
@@ -125,6 +103,35 @@ export default async function TeamPage({ params }: TeamPageProps) {
           </Link>
         </div>
       </div>
+
+      {/* --- Reference: business idea, scratch idea, notes --- */}
+
+      {team.businessIdea && (
+        <div className="panel mt-6 p-6">
+          <h2 className="text-xs font-black uppercase tracking-[0.25em]">
+            Our Sustainable Business Idea
+          </h2>
+          <p className="mt-2 text-sm font-semibold text-[var(--ink)]">
+            {team.businessIdea}
+          </p>
+          {team.sdg && (
+            <p className="mt-2 text-xs font-black uppercase tracking-[0.2em] text-[var(--ink)]/60">
+              SDG: {team.sdg}
+            </p>
+          )}
+        </div>
+      )}
+
+      {team.scratchIdea && (
+        <div className="panel mt-6 p-6">
+          <h2 className="text-xs font-black uppercase tracking-[0.25em]">
+            Our Scratch Project Idea
+          </h2>
+          <p className="mt-2 text-sm font-semibold text-[var(--ink)]">
+            {team.scratchIdea}
+          </p>
+        </div>
+      )}
 
       {team.notes && (
         <div className="panel mt-6 p-6">
