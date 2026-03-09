@@ -72,6 +72,17 @@ export default async function TeamPage({ params }: TeamPageProps) {
         </p>
       )}
 
+      {team.googleDoc && (
+        <a
+          href={team.googleDoc}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 inline-flex text-sm font-black text-[var(--scratch-blue)]"
+        >
+          Open Team Google Doc &rarr;
+        </a>
+      )}
+
       {/* --- Actionable: feedback + current session --- */}
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
@@ -99,7 +110,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
             href={`/sessions/${nextSession.id}`}
             className="mt-4 inline-flex text-sm font-black text-[var(--scratch-blue)]"
           >
-            See today&apos;s steps →
+            See current steps &rarr;
           </Link>
         </div>
       </div>

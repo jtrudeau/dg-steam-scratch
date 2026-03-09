@@ -101,6 +101,7 @@ export type TeamInfo = {
   sdg: string;
   scratchIdea: string;
   scratchProject: string | null;
+  googleDoc: string | null;
   status: "brainstorming" | "building" | "showcasing";
   feedback: string;
   notes?: string;
