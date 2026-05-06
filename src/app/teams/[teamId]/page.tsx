@@ -30,6 +30,9 @@ export default async function TeamPage({ params }: TeamPageProps) {
   const projectId = team?.scratchProject
     ? extractProjectId(team.scratchProject)
     : null;
+  const scratchUrl = team?.scratchProject?.trim() ?? "";
+  const showScratchDocLinkReminder =
+    !scratchUrl || projectId === null;
 
   if (!team) {
     return (
@@ -70,6 +73,14 @@ export default async function TeamPage({ params }: TeamPageProps) {
         <p className="mt-2 text-sm font-semibold text-[var(--ink)]/70">
           {team.members.join(" · ")}
         </p>
+      )}
+
+      {showScratchDocLinkReminder && (
+        <div className="mt-4 border-2 border-[var(--scratch-orange)] bg-[var(--scratch-orange)]/10 p-4">
+          <p className="text-sm font-black text-[var(--ink)]">
+            Important: If your team hub does not show your current Scratch project, you must update the link in your Google Doc to receive feedback. Use this format: &ldquo;This is our current project:&rdquo; and paste the link.
+          </p>
+        </div>
       )}
 
       {team.googleDoc && (

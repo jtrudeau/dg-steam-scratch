@@ -1,15 +1,15 @@
 [
   {
     "teamId": "team-01",
-    "name": "Restart Works",
+    "name": "ReStart Works",
     "members": ["Leon", "Michael M.", "Nathan", "Noah"],
     "businessIdea": "We help people with difficult backgrounds get reintroduced into the workplace, then we give them possible jobs at companies to help increase diversity.",
-    "sdg": "",
+    "sdg": "SDG 8 – Decent Work and Economic Growth; SDG 10 – Reduced Inequalities; SDG 4 – Quality Education",
     "scratchIdea": "My Dream Job — a game that shows a bunch of job icons that, when clicked, show what that job does. For example, if you clicked on a construction icon, it would show you what a construction worker does.",
     "scratchProject": "https://scratch.mit.edu/projects/1280179259",
     "googleDoc": "https://docs.google.com/document/d/1KbTuya5FJu9m3yHhaZATLdul2Y1gVfLiA1XdPRmUaT0/edit?usp=sharing",
     "status": "brainstorming",
-    "feedback": "Make sure to update your Google Doc with current work. Missing: Which SDGs does your business connect to?",
+    "feedback": "The prosthetic idea was a good one. It's ok to follow your heart.",
     "notes": ""
   },
   {
@@ -19,10 +19,10 @@
     "businessIdea": "Aura Beauty is a socially-driven spa that delivers premium beauty services while training and employing vulnerable women as future beauticians.",
     "sdg": "No Poverty, Good Health and Well-Being, Decent Work and Economic Growth, Reduced Inequalities",
     "scratchIdea": "A game teaching people how to cut hair for fun and entertainment.",
-    "scratchProject": null,
+    "scratchProject": "https://scratch.mit.edu/projects/1306542604/",
     "googleDoc": "https://docs.google.com/document/d/19ghkLmbipKZ9OeIrjHyvLntdUm7hqkfcxCHGYtWiwiA/edit?usp=sharing",
     "status": "brainstorming",
-    "feedback": "Your Scratch link is not working — check with Kristina. Make sure to update your Google Doc with current work.",
+    "feedback": "Add a clear goal and short instructions, tie one moment of the game to your spa's mission (training and opportunity), and polish one scene so a visitor understands how to play.",
     "notes": ""
   },
   {
@@ -30,12 +30,12 @@
     "name": "Roots & Blooms",
     "members": ["Muhammad", "Charlene", "Phoenix", "Mila"],
     "businessIdea": "We are trying to help the elderly and young collaborate together and make sure the elderly with no family won't die sad and alone. It helps lonely elderly people socialise with the young and makes them happier. The young get to have fun with the elderly.",
-    "sdg": "",
-    "scratchIdea": "A game about organising events with the elderly and children. Could also be a game where you control people working to organize events.",
-    "scratchProject": "https://scratch.mit.edu/projects/1282672957/",
+    "sdg": "SDGs 3, 15, and 17. 3 (health and well-being): when generations connect, people feel less lonely and happier. 15 (life on land): we help life on land by planting flowers and trees together in summer; toddlers can bring plants home to grow with parents or guardians. 17 (partnerships for the goals): we work together with partners like daycares so the plan can happen.",
+    "scratchIdea": "A choice menu game where the user picks activities for elderly and young people to do together (play with blocks, learn sports, learn to draw). Each choice leads to an interactive scene. A happiness meter tracks the connections made.",
+    "scratchProject": "https://scratch.mit.edu/projects/1309608140",
     "googleDoc": "https://docs.google.com/document/d/1788-UX0Qs6i_CXfulr5rkSVEUrPjFkwEvd814PaAkWk/edit?usp=sharing",
     "status": "brainstorming",
-    "feedback": "Make sure to update your Google Doc with current work. Missing: Which SDGs does your business connect to? Your Scratch idea needs a clearer game mechanic — what does the player actually do?",
+    "feedback": "In your Scratch game, add a way to go back (for example, a Back button to return to the menu or previous scene) so players are not stuck after they pick an activity.",
     "notes": ""
   },
   {
@@ -48,20 +48,20 @@
     "scratchProject": "https://scratch.mit.edu/projects/1266686339/",
     "googleDoc": "https://docs.google.com/document/d/1r6QYUISSkWc5uPfOHgAwG_pSd3UIUlcrePxvi1IDDiI/edit?usp=sharing",
     "status": "brainstorming",
-    "feedback": "Make sure to update your Google Doc with current work. Missing: Which SDGs does your business connect to? You need a Scratch project idea — what will your game or project actually be about?",
+    "feedback": "Make sure to update your Google Doc with current work. Missing: Which SDGs does your business connect to?",
     "notes": ""
   },
   {
     "teamId": "team-05",
     "name": "Stepping Stone",
-    "members": ["Louise", "Leia", "Ioanna", "Summer", "Juliette"],
-    "businessIdea": "We assure that young adults that have aged out of foster care can have an easy reinsertion into society by giving them housing, a job at the Stepping Stone hotel, and an education. We're also helping the planet by having homemade cleaning products, locally sourced produce from the hotel's rooftop garden, and energy efficient light bulbs.",
+    "members": ["Ioanna", "Louise", "Leia", "Summer", "Juliette"],
+    "businessIdea": "We assure that the young adults that have aged out of foster care can have an easy reinsertion into society by giving them housing, a job at the Stepping Stone hotel, and an education. We're also helping the planet by having hand/homemade cleaning products (provided at the Stepping Stone hotel), locally sourced produce coming from the hotel's rooftop garden that will be served to the people staying overnight at the hotel and to the young adults working there, and energy efficient light bulbs placed around the hotel and in the building the young adults will be living in.",
     "sdg": "",
-    "scratchIdea": "A young girl that has aged out of foster care is asking for a place to stay since she has nowhere to go. We help her by offering housing, a job, and an education. Once she arrives at Stepping Stone she will be given a job and must do multiple tasks in a certain amount of time.",
-    "scratchProject": null,
+    "scratchIdea": "A young girl that has aged out of foster care is asking for a place to stay since she has nowhere to go and we help her by offering housing, a job, and an education. Once the girl arrives at Stepping Stone she will be given a job and must do multiple tasks in a certain amount of time.",
+    "scratchProject": "https://scratch.mit.edu/projects/1257588532/",
     "googleDoc": "https://docs.google.com/document/d/1rahwmtZaX_NLStIbTPC2N-c9hDaPEU9rPMbveGjSpAo/edit?usp=sharing",
     "status": "brainstorming",
-    "feedback": "Your Scratch link is incorrect — please update it with the correct project link. Make sure to update your Google Doc with current work. Missing: Which SDGs does your business connect to?",
+    "feedback": "In your game, spell out what players should type in the answer box—examples help a lot (like: “Type yes or no,” or “Type 1, 2, or 3”). Add a short on-screen hint so no one’s stuck guessing what “answer” means. Missing: Which SDGs does your business connect to?",
     "notes": ""
   },
   {
@@ -69,25 +69,25 @@
     "name": "Second Sight",
     "members": ["Dimitri", "Jordano", "Mason", "Mario"],
     "businessIdea": "We are solving the fact that blind people are not included because they cannot enjoy simple board games with others. We are also making them more included.",
-    "sdg": "",
-    "scratchIdea": "You start the game and you can't see anything, but once you start playing it's like you can see. Focused on helping blind people feel included.",
-    "scratchProject": null,
+    "sdg": "Reduced Inequalities, Good Health and Well-Being, Partnerships for the Goals",
+    "scratchIdea": "A quiz game where the user gets questioned about facts and how hard life is for blind people on a daily basis. The user has to answer questions about blind people.",
+    "scratchProject": "https://scratch.mit.edu/projects/1288641104",
     "googleDoc": null,
     "status": "brainstorming",
-    "feedback": "You need to share your Google Doc with edit access. Missing: Which SDGs does your business connect to? Your Scratch idea needs a concrete game mechanic — what does the player actually do step by step? Start a Scratch project and share the link.",
-    "notes": ""
+    "feedback": "Great work on your quiz idea! At the very start, add quick how-to-play steps in kid-friendly words (for example: type the number of your answer, then press Enter). When an answer is wrong, keep your wizard warm and encouraging, and say the right answer in a full sentence so players really learn. When an answer is right, use a full sentence too, so players hear why it matters. Keep helping your players learn about blindness in plain language—like how common vision loss is and what everyday challenges can look like—so your game teaches something true and important.",
+    "notes": "YouTube reference: https://www.youtube.com/watch?v=E7o0ef_hexg"
   },
   {
     "teamId": "team-07",
     "name": "Chic",
     "members": ["Elianne", "Sadie", "Dahlia", "Eveline"],
-    "businessIdea": "We are solving poverty and we help the planet by not letting extra fabric go to the landfill. We sell clothes and with the donations we get, we make blankets for homeless and vulnerable people. We also hire teenagers over 15 that have a hard time getting employment — like being in an adoption center or having a disability — to sew and pick up fabric from other factories. We're also tackling bullying, because young people get bullied for how they dress, and that is why Chic is here to help.",
+    "businessIdea": "We are solving poverty and we help the planet by not letting extra fabric go to the landfill. We also help people by selling clothes to them and with the donations that we get we make blankets for the homeless people and vulnerable people. Another impact for people is that we hire teenagers over 15 that have a hard time getting employment like being in an adoption center or having a disability and ect to sew and pick up the fabric from other factories. We are technically also solving a little bit of bullying because young people these days get bullied for how they dress and their sense of style and that is why Chic is here to help solve all of that.",
     "sdg": "",
     "scratchIdea": "",
-    "scratchProject": null,
-    "googleDoc": null,
+    "scratchProject": "https://scratch.mit.edu/projects/1315720878/",
+    "googleDoc": "https://docs.google.com/document/d/1IcZ1xDSYW5vNfBGMdLGgjyv2hydWxgp_tgOlHdLLcTw/edit?usp=drive_link",
     "status": "brainstorming",
-    "feedback": "You need to share your Google Doc with edit access. Start a Scratch project and share the link. Missing: Which SDGs does your business connect to? You need a Scratch project idea — what will your game or project actually be about?",
+    "feedback": "Use Remix in Scratch to combine your work into one working project that includes the collect-money code and anything else you need—no split copies. Rename it clearly for Chic, then use Scratch’s Share so it’s viewable. Show Ms. Kristina that shared project and confirm with her that it’s the right version; after she confirms, we’ll update the link on your team hub to your final shared project URL.",
     "notes": ""
   },
   {
@@ -97,10 +97,10 @@
     "businessIdea": "We are trying to resolve the problem of junkyards. We stop cars from going to junkyards — we take them, renew and improve them, then sell them for a lower price. We help the planet by stopping the pollution of junkyards and profit by selling our cars.",
     "sdg": "",
     "scratchIdea": "We start with a car that is not upgraded and pollutes the environment. In the top corner of our game there's an energy bar that gives car energy. When the energy is empty you have to go to the garage and fill it up with more energy. When you finish the race you get money, and with that money you can buy better cars that don't pollute.",
-    "scratchProject": null,
+    "scratchProject": "https://scratch.mit.edu/projects/1285201561",
     "googleDoc": "https://docs.google.com/document/d/1rFmGPE4RhR5kLKqsbhcG0MKxClHIGLxPbcu7gpXqxwY/edit?usp=sharing",
     "status": "brainstorming",
-    "feedback": "All team members need access to the Google Doc. Start a Scratch project and share the link. Missing: Which SDGs does your business connect to?",
+    "feedback": "Keep your team Google Doc updated and make sure everyone can open it. Missing: Which SDGs does your business connect to?",
     "notes": ""
   },
   {
@@ -110,7 +110,7 @@
     "businessIdea": "We are trying to fix the house affordability crisis. We help people by renting them affordable apartments and we help the planet and people by reducing homelessness.",
     "sdg": "",
     "scratchIdea": "A tycoon-type game. You buy properties, renovate them, refurnish them and you gain money by the second. Upgrades increase your income. Money for upgrades comes from government offers.",
-    "scratchProject": "https://scratch.mit.edu/projects/1277292204",
+    "scratchProject": "https://scratch.mit.edu/projects/1294595881",
     "googleDoc": "https://docs.google.com/document/d/1gUgH0GpNX0HPFUPBzhjrY5BPyaSDfag9sSqhb5XXLnU/edit?usp=sharing",
     "status": "brainstorming",
     "feedback": "Make sure to update your Google Doc with current work. Missing: Which SDGs does your business connect to?",
@@ -123,10 +123,10 @@
     "businessIdea": "We are a mobile clinic that is trying to solve the crisis of no access to proper care in Québec. We earn profit through the government.",
     "sdg": "",
     "scratchIdea": "Two ideas: (1) You control a little truck that goes to people's houses to heal them, then go to the government with a receipt for proof and get money. (2) You go to houses and heal those who need it, then get little stars that upgrade your truck and let you hire new doctors.",
-    "scratchProject": null,
+    "scratchProject": "https://scratch.mit.edu/projects/1288644870",
     "googleDoc": "https://docs.google.com/document/d/1B_HSQwdBO68HufgIPVsH4V7RnmhA1j2qpZTfMx8-A54/edit?usp=sharing",
     "status": "brainstorming",
-    "feedback": "All team members need access to the Google Doc — currently only two of you do. Make sure to update it with current work. Missing: Which SDGs does your business connect to? Start a Scratch project and share the link.",
+    "feedback": "Double-check that the Scratch project shown on the hub is still your team’s current one—if you moved to a new project, update the link in your Google Doc using “This is our current project:” plus the URL. If this link is correct, leave Mr. Joel a short note (in your Doc is fine) with what you have done lately and what is blocking you. Missing: Which SDGs does your business connect to?",
     "notes": ""
   }
 ]
